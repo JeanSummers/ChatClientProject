@@ -31,7 +31,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'src/index.html',
         })
     ]
 }
