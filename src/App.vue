@@ -1,37 +1,37 @@
 <template>
-<div>
-  <div class="full-width center-content">
-    <h1>Hello Vue.js!</h1>
+<div class="center-content">
+  <div>
+    <header-component title="Hello Vue.js!">And some other tech</header-component>
   </div>
-  <div class="full-width center-content">
-    <h1>{{ date }}</h1>
+  <div><button-counter/></div>
+  <div><button-counter/></div>
+  <div>
+    <h1><timer/></h1>
   </div>
 </div>
 </template>
 
 <script>
+import HeaderComponent from "./components/HeaderComponent.vue";
+import ButtonCounter from "./components/ButtonCounter.vue";
+import TimerComponent from "./components/TimerComponent.vue";
+
 export default {
-  data: () => ({
-    date: Date(),
-    timer: null
-  }),
-  created: function() {
-    this.timer = setInterval(() => (this.date = Date()), 1000);
-  },
-  destroyed: function() {
-    clearInterval(this.timer);
+  components: {
+    "header-component": HeaderComponent,
+    "button-counter": ButtonCounter,
+    timer: TimerComponent
   }
 };
 </script>
 
 
 <style scoped>
-.full-width {
+.center-content > div {
   width: 100%;
-}
-.center-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 </style>
