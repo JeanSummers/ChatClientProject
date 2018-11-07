@@ -1,13 +1,21 @@
 import VueRouter from "vue-router";
-import Home from "./pages/Home.vue";
-import Timer from "./pages/Timer.vue";
-import Button from "./pages/Button.vue";
 
+import Login from "./pages/Login.vue"
+import MainRoom from "./pages/MainRoom.vue"
+import PrivateList from "./pages/PrivateList.vue"
+import PrivateRoom from "./pages/PrivateRoom.vue"
+import Profile from "./pages/Profile.vue"
+import UserRoom from "./pages/UserRoom.vue"
+import UserList from "./pages/UserList.vue"
 
 export default new VueRouter({
     routes: [
-        { path: "/", component: Home },
-        { path: "/counter", component: Button },
-        { path: "/timer", component: Timer }
+        { path: "/", component: Login },
+        { path: "/Main", component: MainRoom },
+        { path: "/Privates", component: PrivateList },
+        { path: "/Users", component: UserList },
+        { path: "/Private/:id", component: PrivateRoom },
+        { path: "/User/:id", component: UserRoom },
+        { path: "/Profile", component: Profile },
     ]
 })
