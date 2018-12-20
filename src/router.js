@@ -7,6 +7,7 @@ import PrivateRoom from "./pages/PrivateRoom.vue"
 import Profile from "./pages/Profile.vue"
 import UserRoom from "./pages/UserRoom.vue"
 import UserList from "./pages/UserList.vue"
+import CredentialsTest from "./pages/CredentialTest.vue"
 
 export default new VueRouter({
     routes: [
@@ -17,5 +18,6 @@ export default new VueRouter({
         { path: "/Private/:id", component: PrivateRoom },
         { path: "/User/:id", component: UserRoom },
         { path: "/Profile", component: Profile },
+        { path: "/CredTest", component: CredentialsTest },
     ]
 })
