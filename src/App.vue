@@ -5,6 +5,7 @@
             <router-link to="/Users">Пользователи</router-link>|
             <router-link to="/Privates">Приватные чаты</router-link>|
             <router-link to="/Profile">Мой профиль</router-link>
+            <router-link to="/CredTest">Тест</router-link>
         </div>
         <router-view></router-view>
     </div>
